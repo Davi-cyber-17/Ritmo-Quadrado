@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#04060f">
+<title>Ritmo Quadrado</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="stage" data-state="menu">
+  <canvas id="game"></canvas>
+
+  <div id="tools">
+    <button id="pauseBtn" aria-label="Pausar">❚❚</button>
+    <button id="fsBtn" aria-label="Tela cheia">⛶</button>
+  </div>
+
+  <section id="menu" class="overlay">
+    <div class="panel">
+      <h1 data-t="Ritmo Quadrado">Ritmo<br>Quadrado</h1>
+      <button id="play">Jogar</button>
+      <p>Toque, clique ou use <b>Espaço</b> para pular.<br>Segure para pular sem parar.</p>
+      <p class="best">Melhor: <span id="bestMenu">0</span>%</p>
+    </div>
+  </section>
+
+  <section id="pause" class="overlay hidden">
+    <div class="panel">
+      <h2>Pausado</h2>
+      <button id="resume">Continuar</button>
+      <button id="quit" class="ghost">Menu</button>
+    </div>
+  </section>
+
+  <section id="win" class="overlay hidden">
+    <div class="panel">
+      <h2>Nível completo</h2>
+      <p>Tentativas: <b id="winTries">0</b></p>
+      <button id="again">Jogar de novo</button>
+    </div>
+  </section>
+</main>
+<div id="hint">Gire o aparelho para jogar melhor</div>
+<script src="script.js"></script>
+</body>
+</html>
